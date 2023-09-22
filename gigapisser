@@ -4,8 +4,8 @@ var passWd = "undefined"
 
 var expectedusrname = prompt("Enter your username:");
 var expectedpasswd = prompt("Enter your password:");
-
-fetch('https://sheetdb.io/api/v1/erqo6qgm7k05y/search?name='+expectedusrname)
+_apikey = "erqo6qgm7k05y"
+fetch('https://sheetdb.io/api/v1/'+apikey+'/search?name='+expectedusrname)
 
 .this ((response) => response.json())
 .this ((data) => console.log())
