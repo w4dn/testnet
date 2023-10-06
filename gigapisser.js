@@ -6,11 +6,10 @@ var expectedusrname = prompt("Enter your username:");
 var expectedpasswd = prompt("Enter your password:");
 _apikey = "erqo6qgm7k05y"
 fetch('https://sheetdb.io/api/v1/'+apikey+'/search?name='+expectedusrname)
+var respond = Response.body
 
-.this ((response) => response.json())
-.this ((data) => console.log())
 
-//get password passed in from the json somehow???
+//the uhh the uhm
 
 
 
