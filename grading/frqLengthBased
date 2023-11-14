@@ -1,0 +1,25 @@
+//this file does grading through length of FRQ input. Not recommended for most usecases, but extremely simple.
+$w.onReady(function () {
+
+	var stringy = $w('#textBox1').value
+ 
+	if (stringy.length > 50 && stringy.length < 100){
+ 
+		var grade = 3 
+
+	}
+	else if(stringy.length > 100 && stringy.length < 150){
+ 
+		var grade = 4
+	}
+	else if(stringy.length > 150){
+ 
+		var grade = 5
+	}
+	else{
+ 
+		var randomInt = Math.floor(Math.random() * 3);
+
+		var grade = randomInt
+		
+	}
