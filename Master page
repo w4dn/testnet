@@ -1,0 +1,77 @@
+// The code in this file will load on every page of your site
+var grade = 0;
+var name = "";
+var usernmae;
+var password;
+var FRQScore = 0;
+var MCQScore = 0;
+var Email = "";
+var login = false;
+var MCQanswer = "";
+$w.onReady(function () {
+    // Write your code hereclass Car {
+
+});
+// class Values {
+//   constructor(grade, name, FRQ, MCQ, Email, usernmae, password) {
+//     this.grade = grade;
+//     this.name = name;
+//     this.FRQ = FRQ;
+//     this.MCQ = MCQ;
+//     this.Email = Email;
+//     this.usernmae = usernmae;
+//     this.password = password;
+
+//   } 
+// {
+  function getLogin() {
+      return login;
+  }
+  function getname() {
+      return name;
+  }
+  function getFRQScore() {
+      return FRQScore;
+  }
+  function getMCQScore() {
+      return MCQScore;
+  }
+  function getEmail() {
+      return Email;
+  }
+  function getPassword() {
+      return password;
+  }
+  function getUsername() {
+      return usernmae;
+  }
+  function getMCQanswer(){
+    return MCQanswer;
+  }
+  function setPassword(p){
+    password = p;
+  }
+  function setUsername(u) {
+    usernmae = u;
+  }
+  function setGrade(g) {
+    grade = g;
+  }
+  function setName(n) {
+    name = n;
+  }
+  function setFRQScore(F) {
+    FRQScore = F;
+  }
+  function setMCQScore(M) {
+    MCQScore = M;
+  }
+  function setEmail(E) {
+    Email = E;
+  }
+  function setLogin(L) {
+    login = L;
+  }
+  function setMCQanswer(M){
+    MCQanswer = M;
+  }
