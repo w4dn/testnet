@@ -1,0 +1,19 @@
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+	var L = getLogin();
+	while(L === false){
+		if($w("#textBox2").value === $w("#textBox3").value && $w("#button1").onClick){
+			setName($w("#input1").value);
+			setEmail($w("#textBox4").value);
+			setGrade(Number($w("#input2").value));
+			setUsername($w("#textBox1").value);
+			setPassword($w("#textBox2").value);
+			setLogin(true);
+			L = getLogin();
+			$w("#button1").link = "https://editor.wix.com/html/editor/web/renderer/edit/db280c94-e771-40dd-83a7-63c61f87ee6e?metaSiteId=e77c58cd-c2a4-4bc9-922d-592159fb91a9";
+		}
+		//set the URL to the preview testing environment and reaserch how to clear text boxes (look at the next tab for button properties...)
+		//else IDK it does not work...
+	}
+});
