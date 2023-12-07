@@ -1,0 +1,15 @@
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+    $w('#button1').enable();
+    $w('#button2').disable();
+    if ($w('#textBox1').value === getUsername() && $w('#textBox2').value === getPassword()) {
+        $w('#button2').enable();
+        $w('#button1').disable();
+        setLogin(true);
+    }
+    $w("#button1").onClick(()=>{
+        
+    }
+
+});
