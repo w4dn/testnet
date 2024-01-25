@@ -1,77 +1,85 @@
-// The code in this file will load on every page of your site
+//inital definitions for testnet,
 var grade = 0;
+
 var name = "";
+
 var usernmae;
+
 var password;
+
 var FRQScore = 0;
+
 var MCQScore = 0;
+
 var Email = "";
+
 var login = false;
+
 var MCQanswer = "";
-$w.onReady(function () {
-    // Write your code hereclass Car {
 
-});
-// class Values {
-//   constructor(grade, name, FRQ, MCQ, Email, usernmae, password) {
-//     this.grade = grade;
-//     this.name = name;
-//     this.FRQ = FRQ;
-//     this.MCQ = MCQ;
-//     this.Email = Email;
-//     this.usernmae = usernmae;
-//     this.password = password;
+var testKey = "";
 
-//   } 
-// {
-  function getLogin() {
-      return login;
-  }
-  function getname() {
-      return name;
-  }
-  function getFRQScore() {
-      return FRQScore;
-  }
-  function getMCQScore() {
-      return MCQScore;
-  }
-  function getEmail() {
-      return Email;
-  }
-  function getPassword() {
-      return password;
-  }
-  function getUsername() {
-      return usernmae;
-  }
-  function getMCQanswer(){
+var startTest = false;
+
+var queArray = ["Q", "A1", "A2", "A3", "A4", "Answer"];
+
+var que = [];
+
+
+
+//define functions for later use
+function getStartTest(){
+    return startTest;
+}
+
+function getTestKey(){
+    return testKey;
+}
+function getLogin() {
+    return login;
+}
+
+function getName() {
+    return name;
+}
+
+function getFRQScore() {
+    return FRQScore;
+}
+
+function getMCQScore() {
+    return MCQScore;
+}
+
+function getEmail() {
+    return Email;
+}
+
+function getPassword() {
+    return password;
+}
+
+function getUsername() {
+    return usernmae;
+}
+
+function getMCQanswer() {
     return MCQanswer;
+}
+
+//define fullscreen function
+function enterFullScreen(element) {
+  
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
   }
-  function setPassword(p){
-    password = p;
+  else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();     // Firefox
   }
-  function setUsername(u) {
-    usernmae = u;
+  else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();  // Safari
   }
-  function setGrade(g) {
-    grade = g;
+  else if(element.msRequestFullscreen) {
+    element.msRequestFullscreen();      // IE/Edge
   }
-  function setName(n) {
-    name = n;
-  }
-  function setFRQScore(F) {
-    FRQScore = F;
-  }
-  function setMCQScore(M) {
-    MCQScore = M;
-  }
-  function setEmail(E) {
-    Email = E;
-  }
-  function setLogin(L) {
-    login = L;
-  }
-  function setMCQanswer(M){
-    MCQanswer = M;
-  }
+};
