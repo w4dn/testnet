@@ -1,0 +1,153 @@
+//forgot password
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+	$w("#button1").disable;
+	if($w("#textBox2").value === $w("#textBox3").value && getUsername() === $w('#textBox1').value && getEmail() === $w('#textBox4').value){
+		password = $w("#textBox2").value;
+		$w("#button1").enable;
+	}
+
+});
+
+//forgot username
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+	$w("#button1").onClick(()=>{
+		name = $w("#input1").value;
+		Email = $w("#textBox4").value;
+		grade = Number($w("#input2").value);
+		usernmae = $w("#textBox6").value;
+		if($w("#textBox2").value === $w("#textBox5").value){
+			password = $w("#textBox2").value;
+		}
+	})
+});
+
+//portal
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+	if(startTest){
+		$w('#Section1RegularButton1').enable;
+	}
+	$w('#Section1RegularButton1').onClick(() => {
+
+	})
+	enterFullScreen();
+
+
+});
+
+//admin portal
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+    $w('#button1').onClick(() => {
+        testKey = $w("#input1").value;
+        startTest = Boolean($w("#switch1").value);
+    })
+
+});
+
+//private member page
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+    function go_full_screen(){
+  var elem = document.documentElement;
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  } else if (elem.mozRequestFullScreen) {
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  }
+}
+    
+});
+
+//FRQ set up
+
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+	for(var i = 1; i < 20; i++){
+		if ($w('#textbox' + i).value.equals("")){
+			maxCount = i;
+			break;
+		}
+		FRQArray[i] = $w('#textbox' + i).value
+	}
+
+});
+
+//members area
+// API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+// “Hello, World!” Example: https://learn-code.wix.com/en/article/1-hello-world
+
+$w.onReady(function () {
+    window.open('https://javascript.info/')
+});
+
+//MCQ
+
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+
+});
+
+/**
+*	Adds an event handler that runs when the element is clicked.
+	[Read more](https://www.wix.com/corvid/reference/$w.ClickableMixin.html#onClick)
+*	 @param {$w.MouseEvent} event
+*/
+export function button1_click(event) {
+	const stringy = $w('#radioGroup1').value
+    if (stringy == getMCQanswer()) {
+        MCQScore = (MCQScore + 1);
+    }
+	var num = Math.floor(Math.random() * 2);
+	if(num === 0){
+		$w('#button1').link = "http://wix.com";
+	}
+}
+
+//MCQ set up
+
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+import {add} from 'public/new-file.js';
+$w.onReady(function () {
+	MCQArray[0] = $w("#textBox1").value
+	MCQArray[1] = $w("#input1").value
+	MCQArray[2] = $w("#input2").value
+	MCQArray[3] = $w("#input3").value
+	MCQArray[4] = $w("#input4").value
+
+});
+
+//FRQ
+
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+$w.onReady(function () {
+    count++;
+    $w('#text36').text = FRQArray[count];
+    $w('#button1').onClick(() => {
+        const stringy = $w('#textBox1').value;
+        if (stringy.length > 50 && stringy.length < 100) {
+            FRQScore = 3;
+
+        } else if (stringy.length > 100 && stringy.length < 150) {
+            FRQScore = 4;
+        } else if (stringy.length > 150) {
+            FRQScore = 5;
+        } else {
+            FRQScore = Math.floor(Math.random() * 3);
+        }
+    })
+});
